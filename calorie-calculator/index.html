@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calorie Calculator</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+  <main class="container calculator">
+
+    <div class="calc-header">
+      <i class="fa-solid fa-fire"></i>
+      <h1>Calorie Calculator</h1>
+      <p>Estimate your daily calorie needs based on your profile.</p>
+    </div>
+
+    <div class="form-card">
+
+      <div class="field">
+        <label><i class="fa-solid fa-user"></i> Age</label>
+        <input id="age" type="number" min="1" step="1"
+          placeholder="Example: 22" />
+      </div>
+
+      <div class="field">
+        <label><i class="fa-solid fa-venus-mars"></i> Gender</label>
+        <select id="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label><i class="fa-solid fa-weight-scale"></i> Weight (kg)</label>
+        <input id="cweight" type="number" min="1" step="0.1"
+          placeholder="Example: 64" />
+      </div>
+
+      <div class="field">
+        <label><i class="fa-solid fa-ruler-vertical"></i> Height (cm)</label>
+        <input id="cheight" type="number" min="1" step="0.1"
+          placeholder="Example: 172" />
+      </div>
+
+      <div class="field">
+        <label><i class="fa-solid fa-person-running"></i> Activity Level</label>
+        <select id="activity">
+          <option value="1.2">Sedentary (little or no exercise)</option>
+          <option value="1.375">Lightly active (1-3 days/week)</option>
+          <option value="1.55">Moderately active (3-5 days/week)</option>
+          <option value="1.725">Very active (6-7 days/week)</option>
+          <option value="1.9">Super active (athlete level)</option>
+        </select>
+      </div>
+
+      <button id="calorieBtn">
+        <i class="fa-solid fa-calculator"></i> Calculate Calories
+      </button>
+
+      <p id="calorieMsg" class="message"></p>
+
+    </div>
+
+    <section class="result modern-result calorie-result">
+      <div>
+        <span>Estimated Daily Calories</span>
+        <h2><span id="calorieOut">0</span> kcal/day</h2>
+      </div>
+    </section>
+
+    <a class="back" href="../index.html">
+      <i class="fa-solid fa-arrow-left"></i> Back
+    </a>
+
+  </main>
+
+  <script src="../script.js"></script>
+</body>
+</html>
